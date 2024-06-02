@@ -156,18 +156,20 @@ export default function CreatePodcast() {
           </div>
           <div className="flex flex-col pt-10">
             <GeneratePodcast
-              setAudioUrl={setAudioUrl}
+              setAudio={setAudioUrl}
               setAudioStorageId={setAudioStorageId}
               setAudioDuration={setAudioDuration}
+              voiceType={voiceType!}
               audio={audioUrl}
-              voiceType={voiceType}
               voicePrompt={voicePrompt}
               setVoicePrompt={setVoicePrompt}
             />
             <GenerateThumbnail
-              image={imageUrl}
-              setImageUrl={setImageUrl}
+              setImage={setImageUrl}
               setImageStorageId={setImageStorageId}
+              image={imageUrl}
+              imagePrompt={imagePrompt}
+              setImagePrompt={setImagePrompt}
             />
             <div className="mt-10 w-full">
               <Button
